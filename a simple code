@@ -23,15 +23,16 @@ for(int i=0;i<n;i++)
     {
         b.push_back(j);
         if(pmChecker(b[i])==1)
-        {if(pmChecker(n-b[i]==1))
-           {return m=1;}
+        {
+          if(pmChecker(n-b[i]==1))
+             {return m=1;}
         }
+        if(m==1)
+          {cout<<"YES"<<endl;}
     }
     
 }
 
-if(m==1)
-{cout<<"YES"<<endl;}
 
 }
 
@@ -45,5 +46,5 @@ int pmChecker(int a)
    }
    if(counter==2)
    {return 1;}
-
+   else return 0;
 }
