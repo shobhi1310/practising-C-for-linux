@@ -5,7 +5,7 @@ using namespase std;
 
 int main(){
 
-cin << n;
+cin >> n;
 int a[n];
 
 for(int i=0;i<n;i++)
@@ -13,10 +13,37 @@ for(int i=0;i<n;i++)
     cin<<a[n];
 }
 
+int m=1;
+
 for(int i=0;i<n;i++)
 {
-    cout<<a[n]<<endl;
+    vector<int> b;
+    int m = a[i]/2;
+    for(int j=1;j<=m;j++)
+    {
+        b.push_back(j);
+        if(pmChecker(b[i])==1)
+        {if(pmChecker(n-b[i]==1))
+           {return m=1;}
+        }
+    }
+    
 }
 
+if(m==1)
+{cout<<"YES"<<endl;}
+
+}
+
+int pmChecker(int a)
+{
+   int counter =0;
+   for(int i=2;i<a;i++)
+   {  
+      if(a%i===0)
+      {counter++;}
+   }
+   if(counter==2)
+   {return 1;}
 
 }
